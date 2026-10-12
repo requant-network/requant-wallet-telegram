@@ -39,7 +39,9 @@ npm test
 npm run test:core
 ```
 
-Output: `dist-web/`, including the Telegram entry, external export page, shared Web Wallet fallback, self-hosted SDK/fonts/WASM and separate service workers. For development, run `npm run dev`; wallet RPC is proxied to the existing Requant gateway. The local export service must run separately on port 3313 and requires a bot credential in a local secret file.
+Output: `dist-web/`, including the Telegram entry, external export page, shared Web Wallet fallback, self-hosted SDK/fonts/WASM and separate service workers. Both build and development commands download the Telegram SDK when a verified local copy is missing and check its pinned SHA-256 before using it. `public/telegram-web-app.js` is ignored by Git. The first preparation needs access to `telegram.org`; later runs reuse a verified copy offline. An upstream checksum change stops preparation until reviewed.
+
+For development, run `npm run dev`; wallet RPC is proxied to the existing Requant gateway. The local export service must run separately on port 3313 and requires a bot credential in a local secret file.
 
 ## Deployment
 

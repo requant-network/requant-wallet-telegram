@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --config vite.web.config.ts",
+    "dev": "node scripts/fetch-telegram-sdk.mjs && vite --config vite.web.config.ts",
     "build": "npm run build:web",
     "build:web-core": "node scripts/build-browser-core.mjs",
-    "build:web": "npm run build:web-core && tsc -p tsconfig.web.json --noEmit && vite build --config vite.web.config.ts && node scripts/package-web.mjs",
+    "build:web": "node scripts/fetch-telegram-sdk.mjs && npm run build:web-core && tsc -p tsconfig.web.json --noEmit && vite build --config vite.web.config.ts && node scripts/package-web.mjs",
     "test": "node --test test/*.test.mjs gateway/test/*.test.mjs",
     "test:core": "cargo test --locked -p requant-browser-core -p requant-wallet-portable",
     "check": "npm run build && npm test"
