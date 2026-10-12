@@ -16,3 +16,6 @@ data/
 *.p12
 *.keystore
 *.jks
+
+# Downloaded and verified before build/development; do not vendor the Telegram SDK.
+public/telegram-web-app.js
