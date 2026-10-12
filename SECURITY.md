@@ -1,7 +1,7 @@
 # Security policy
 
-Requant Wallet for Telegram is pre-alpha software for the Requant test network. It has not had an
-external audit. Test RQT and the test-network assets used in swaps have no value. Do not use this
+Requant Wallet for Telegram is pre-alpha software for the Requant test network. An internal security review
+is planned and has not yet been completed. Test RQT and the test-network assets used in swaps have no value. Do not use this
 application to store real funds or import a wallet used on a production network.
 
 ## How to report
