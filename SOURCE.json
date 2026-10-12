@@ -1,9 +1,10 @@
 {
   "walletApplication": "0.5.0",
   "portableWalletCore": "0.10.0",
-  "walletSourceCommit": "6a1d43f",
   "upstream": "https://github.com/requant-network/requant",
   "portableCoreProvenance": "vendor/wallet/UPSTREAM.json",
   "telegramEntry": "web/src/telegram/main.tsx",
-  "sharedApplication": "web/src/App.tsx"
+  "sharedApplication": "web/src/App.tsx",
+  "walletApplicationBaseCommit": "6a1d43f",
+  "telegramIntegrationCommit": "2943c85"
 }
