@@ -53,6 +53,10 @@ Publish new immutable assets before replacing HTML/service workers, and retain p
 
 ## Source and validation
 
-[SOURCE.json](SOURCE.json) records the shared application/core versions. Vendored Requant source retains its [provenance](vendor/PROVENANCE.md), [portable-core adaptations](vendor/wallet/UPSTREAM.json) and Apache-2.0 license. IBM Plex fonts retain their bundled license. The official Telegram SDK is self-hosted; its source and checksum are documented in `telegram/README.md`.
+[SOURCE.json](SOURCE.json) records the shared application/core versions. Vendored Requant source retains its [provenance](vendor/PROVENANCE.md), [portable-core adaptations](vendor/wallet/UPSTREAM.json), [Apache-2.0 license](vendor/LICENSE) and [upstream notices](vendor/NOTICE). IBM Plex fonts retain their bundled license. The official Telegram SDK is self-hosted; its source and checksum are documented in `telegram/README.md`.
 
 Node tests cover gateway constraints, precise amounts, Telegram session authentication, encrypted export lifecycle, backup handling and update safety. Rust tests cover wallet and protocol operations with unfunded fixtures. Browser smoke checks covered import, shared screens, local persistence and encrypted export on the deployed HTTPS build, plus offline launch with the official Telegram SDK and a simulated native bridge. Physical Telegram clients have not all been individually verified.
+
+## Security reports
+
+See [SECURITY.md](SECURITY.md) for the reporting contact, security scope and trust boundaries. Report vulnerabilities privately; never include recovery phrases, private keys or credentials.
