@@ -1,0 +1,4 @@
+[workspace]
+resolver = "2"
+members = ["crates/browser-core", "vendor/wallet", "vendor/consensus", "vendor/tnet"]
+default-members = ["crates/browser-core", "vendor/wallet"]

@@ -1,0 +1,34 @@
+{
+  "name": "requant-wallet-telegram",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.web.config.ts",
+    "build": "npm run build:web",
+    "build:web-core": "node scripts/build-browser-core.mjs",
+    "build:web": "npm run build:web-core && tsc -p tsconfig.web.json --noEmit && vite build --config vite.web.config.ts && node scripts/package-web.mjs",
+    "test": "node --test test/*.test.mjs gateway/test/*.test.mjs",
+    "test:core": "cargo test --locked -p requant-browser-core -p requant-wallet-portable",
+    "check": "npm run build && npm test"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "prettier": "^3.6.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  }
+}
