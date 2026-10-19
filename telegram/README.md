@@ -1,7 +1,5 @@
 # Retired adapter — recovery and provenance only
 
-> **Historical adapter only.** New swaps are paused across the native RQT wallet family. Do not launch this retired Mini App or create/fund a swap. Keep original swap backups and recover them in the current RQT wallet. The descriptions below record historical behavior.
-
 The native RQT Telegram Mini App and its bot/export service remain stopped. Do not run the historical deployment/configuration steps below. Preserve device IndexedDB, encrypted backups and server volumes. Native RQT belongs to the separate web/desktop/Android/extension family; the Telegram-only TON/jetton wallet is a different product without a bridge.
 
 ## Historical implementation
@@ -14,7 +12,7 @@ Retired bot: `@requant_wallet_bot` is maintenance-only. Do not launch or configu
 
 ## Functions
 
-Create/restore 24-word HD wallets, encrypted/legacy imports, multiple wallets, watch-only, address derivation/recovery scanning, balances/history/UTXOs, multi-recipient send/max, fee selection, consolidation, verified-parent offline signing and broadcast, conditions/cosigning, BTC Signet/Lightning testnet/USDT TRON Nile swaps and refunds, encrypted per-swap backups, payment channels and signed transaction packages. These are the shared wallet operations, using the same gateway and transaction reviews. Chain RPC remains available offline only for operations that do not need current chain state.
+Create/restore 24-word HD wallets, encrypted/legacy imports, multiple wallets, watch-only, address derivation/recovery scanning, balances/history/UTXOs, multi-recipient send/max, fee selection, consolidation, verified-parent offline signing and broadcast, conditions/cosigning, payment channels and signed transaction packages. These are the shared wallet operations, using the same gateway and transaction reviews. Chain RPC remains available offline only for operations that do not need current chain state.
 
 The adapter integrates Telegram safe areas, expanded viewport, native back/close confirmation, external links, public address sharing and clipboard fallback. The signing session locks on inactivity/minimize, except while its file-export dialog is active (the normal native file-dialog behavior). Automatic updates use the shared service-worker logic, with a separate `/telegram-wallet/` scope and cache so an older Web Wallet cache cannot intercept Mini App launches. Updates wait for active Mini App sessions to leave protected flows.
 
