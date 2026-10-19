@@ -1,3 +1,9 @@
+# Retired adapter — recovery and provenance only
+
+The native RQT Telegram Mini App and its bot/export service remain stopped. Do not run the historical deployment/configuration steps below. Preserve device IndexedDB, encrypted backups and server volumes. Native RQT belongs to the separate web/desktop/Android/extension family; the Telegram-only TON/jetton wallet is a different product without a bridge.
+
+## Historical implementation
+
 # Requant Telegram Wallet
 
 The Mini App uses the same `web/src/App.tsx`, protocol screens, service and Rust/WASM wallet core as Web Wallet 0.5.0. It adds a Telegram platform adapter; there is no separate signing implementation or reduced feature list. Public UI is English, with the approved Signal / IBM Plex Sans design.

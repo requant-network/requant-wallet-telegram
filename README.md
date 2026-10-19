@@ -1,12 +1,14 @@
-# Requant Wallet for Telegram
+# Retired Requant RQT Mini App
 
-A self-custody Telegram Mini App for the Requant testnet. Uses the shared Requant Wallet 0.5.0 interface and portable wallet core 0.10.0, with the Signal design and IBM Plex Sans.
+**Retired — 2026-10-19.** This repository preserves the previous native RQT Telegram application for source provenance and recovery. It is not an active wallet deployment. Do not deploy this application or restart its former bot. Native RQT uses the web, Windows, macOS, Linux, Android and browser-extension wallet family, which has no Mini App.
 
-**Open [@requant_wallet_bot](https://t.me/requant_wallet_bot), press Start, then Open Wallet.** The application is served at [requant.network/telegram-wallet](https://requant.network/telegram-wallet/). Opening that address outside Telegram shows the bot and Web Wallet links.
+The separate Telegram-only wallet supports TON and jettons, including jRQT once its official master is issued. It is maintained independently, without native RQT accounts, a bridge or RQT conversion.
+
+The former `@requant_wallet_bot` is maintenance-only and `/telegram-wallet/` displays an in-development notice. Keep existing encrypted RQT backups and recovery phrases; restore them in the [RQT Web Wallet](https://requant.network/wallet/) or the native RQT applications. Do not clear old Telegram wallet storage before recovering your backups.
 
 Testnet coins have no value. The network may reset.
 
-## Features
+## Historical features (inactive)
 
 - Create and restore 24-word wallets; import encrypted, watch-only and legacy wallets; manage multiple wallets.
 - Receive addresses and QR codes, recovery scanning, balances, history and UTXOs.
@@ -26,7 +28,7 @@ Passwords, recovery phrases and signing keys stay on the device. The bot handles
 
 Details: [Telegram adapter, export protocol and deployment](telegram/README.md).
 
-## Build
+## Historical local build
 
 Requires Node.js 24, Rust **1.99.0** (pinned in `rust-toolchain.toml`) with the `wasm32-unknown-unknown` target, `wasm-bindgen-cli` **0.2.129**, and Clang for the portable secp256k1 dependency.
 
@@ -41,9 +43,9 @@ npm run test:core
 
 Output: `dist-web/`, including the Telegram entry, external export page, shared Web Wallet fallback, self-hosted SDK/fonts/WASM and separate service workers. For development, run `npm run dev`; wallet RPC is proxied to the existing Requant gateway. The local export service must run separately on port 3313 and requires a bot credential in a local secret file.
 
-## Deployment
+## Historical deployment — do not redeploy
 
-The current installation shares the Requant server and authenticated wallet gateway. Keep `/wallet/` assets and `/telegram-wallet/` application routing on the same HTTPS origin. See [Caddy routes](telegram/Caddyfile.fragment) and [Compose service](telegram/compose.telegram-wallet.yml). Reverse proxy `/wallet-api/*` to the constrained [wallet gateway](gateway/README.md), and `/telegram-wallet-api/*` to the Telegram service.
+The retired installation shared the Requant server and authenticated wallet gateway. Keep `/wallet/` assets and `/telegram-wallet/` application routing on the same HTTPS origin. See [Caddy routes](telegram/Caddyfile.fragment) and [Compose service](telegram/compose.telegram-wallet.yml). Reverse proxy `/wallet-api/*` to the constrained [wallet gateway](gateway/README.md), and `/telegram-wallet-api/*` to the Telegram service.
 
 The bot credential is read from `/run/secrets/telegram-bot-token`; create and mount that file on the server. It is never bundled into browser code. `node telegram/configure.mjs` configures commands and the Open Wallet menu, and refuses to replace an existing webhook. The service uses long polling with a persisted update offset. A profile-level Launch app button is an optional BotFather setting; the menu and `/start` work without it.
 
