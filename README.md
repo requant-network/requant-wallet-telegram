@@ -14,7 +14,7 @@ Testnet coins have no value. The network may reset.
 - Receive addresses and QR codes, recovery scanning, balances, history and UTXOs.
 - Multi-recipient payments, send max, fee selection, consolidation and transaction review.
 - Watch-only preparation, offline signing and broadcasting; spending conditions and cosigning.
-- BTC Signet, Lightning testnet and USDT TRON Nile swaps, refunds and encrypted swap backups.
+- Historical BTC Signet, Lightning testnet and TRON Nile USDT experiments. New swaps are paused in the current RQT wallet family; preserve encrypted swap backups for recovery.
 - Payment channels and signed transaction packages.
 - Local password protection, encrypted exports, inactivity locking and automatic application updates.
 
